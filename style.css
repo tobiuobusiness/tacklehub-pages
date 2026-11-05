@@ -1,0 +1,153 @@
+:root {
+  color-scheme: light dark;
+  --text: #1c1c1e;
+  --muted: #5a5a60;
+  --bg: #ffffff;
+  --surface: #f2f2f7;
+  --accent: #0a5f9e;
+  --border: #d1d1d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f2f2f7;
+    --muted: #b8b8bf;
+    --bg: #000000;
+    --surface: #1c1c1e;
+    --accent: #6cb6ff;
+    --border: #3a3a3c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  z-index: 1;
+}
+
+header,
+main,
+footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+main {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 2.25rem 0 0.5rem;
+  padding-top: 0.25rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.25rem;
+}
+
+p,
+ul {
+  margin: 0.5rem 0 1rem;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.note {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+footer {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
